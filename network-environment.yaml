@@ -1,0 +1,34 @@
+# This template configures each role to use a pair of bonded nics (nic2 and
+# nic3) and configures an IP address on each relevant isolated network
+# for each role. This template assumes use of network-isolation.yaml.
+#
+# FIXME: if/when we add functionality to heatclient to include heat
+# environment files we should think about using it here to automatically
+# include network-isolation.yaml.
+resource_registry:
+  OS::TripleO::Compute::Net::SoftwareConfig: /home/stack/templates/nic-configs/compute.yaml
+  OS::TripleO::Controller::Net::SoftwareConfig: /home/stack/templates/nic-configs/controller.yaml
+  OS::TripleO::CephStorage::Net::SoftwareConfig: /home/stack/templates/nic-configs/ceph-storage.yaml
+
+parameter_defaults:
+  CloudDomain: "nfv.amx.local"
+  InternalApiNetCidr: 172.31.120.0/24
+  StorageNetCidr: 172.31.100.0/24
+  StorageMgmtNetCidr: 172.31.110.0/24
+  ExternalNetCidr: 172.31.90.0/24
+  InternalApiAllocationPools: [{'start': '172.31.120.50', 'end': '172.31.120.250'}]
+  StorageAllocationPools: [{'start': '172.31.100.50', 'end': '172.31.100.250'}]
+  StorageMgmtAllocationPools: [{'start': '172.31.110.50', 'end': '172.31.110.250'}]
+  TenantAllocationPools: [{'start': '172.16.0.10', 'end': '172.16.0.250'}]
+  ExternalAllocationPools: [{'start': '172.31.90.50', 'end': '172.31.90.250'}]
+  ExternalNetworkVlanID: 90
+  InternalApiNetworkVlanID: 120
+  TenantNetworkVlanID: 42
+  StorageNetworkVlanID: 100
+  StorageMgmtNetworkVlanID: 110
+  ControlPlaneSubnetCidr: "24"
+  ControlPlaneDefaultRoute: 172.31.60.1
+  EC2MetadataIp: 172.31.60.1
+  DnsServers: ["172.31.60.25","8.8.8.8"]
+  ExternalInterfaceDefaultRoute: "172.31.90.1"
+  NeutronExternalNetworkBridge: "''"

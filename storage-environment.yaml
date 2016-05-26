@@ -1,0 +1,5 @@
+parameters:
+  CinderEnableIscsiBackend: false
+  CinderEnableRbdBackend: true
+  NovaEnableRbdBackend: true
+  GlanceBackend: rbd

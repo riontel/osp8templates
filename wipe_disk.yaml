@@ -1,0 +1,22 @@
+heat_template_version: 2015-04-30
+resources:
+  userdata:
+    type: OS::Heat::MultipartMime
+    properties:
+      parts:
+      - config: {get_resource: clean_disk}
+
+  clean_disk:
+    type: OS::Heat::SoftwareConfig
+    properties:
+      config: |
+        #!/bin/bash
+        DATA_DISKS="sdb sdc sdd sde sdf sdg sdh sdi sdj"
+        { for disk in $DATA_DISKS
+        do
+           sgdisk -Z /dev/$disk
+           sgdisk -g /dev/$disk
+        done } > /root/wipe_disk.txt
+outputs:
+  OS::stack_id:
+    value: {get_resource: userdata}
