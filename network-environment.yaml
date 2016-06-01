@@ -28,7 +28,7 @@ parameter_defaults:
   StorageMgmtNetworkVlanID: 110
   ControlPlaneSubnetCidr: "24"
   ControlPlaneDefaultRoute: 172.31.60.1
-  EC2MetadataIp: 172.31.60.1
+  EC2MetadataIp: 172.31.60.25
   DnsServers: ["172.31.60.25","8.8.8.8"]
   ExternalInterfaceDefaultRoute: "172.31.90.1"
   NeutronExternalNetworkBridge: "''"

@@ -1,0 +1,28 @@
+2016-05-31 15:50:35.906 15704 INFO openstackclient.shell [ admin None] START with options: ['overcloud', 'deploy', '--templates', '-e', '/usr/share/openstack-tripleo-heat-templates/environments/network-isolation.yaml', '-e', '/home/stack/templates/scheduler_hints_env.yaml', '-e', '/home/stack/templates/network-environment.yaml', '-e', '/home/stack/templates/storage-environment.yaml', '-e', '/home/stack/templates/rhel-registration/environment-rhel-registration.yaml', '-e', '/home/stack/templates/rhel-registration/rhel-registration-resource-registry.yaml', '--control-flavor', 'baremetal', '--compute-flavor', 'baremetal', '--ceph-storage-flavor', 'baremetal', '--compute-scale', '2', '--control-scale', '3', '--ceph-storage-scale', '3', '--block-storage-scale', '0', '--swift-storage-scale', '0', '--libvirt-type', 'kvm', '--ntp-server', '172.31.60.20', '--neutron-network-type', 'vlan', '--neutron-bridge-mappings', 'physnet-external:br-ex,physnet-tenant:br-bond0', '--neutron-network-vlan-ranges', 'physnet-tenant:1000:1999', '--neutron-disable-tunneling', '--timeout', '60', '--verbose', '--log-file', 'overcloud_new.log']
+2016-05-31 15:50:35.972 15704 INFO openstackclient.shell [ admin admin] command: overcloud deploy -> tripleoclient.v1.overcloud_deploy.DeployOvercloud
+2016-05-31 15:50:35.972 15704 INFO openstackclient.common.clientmanager [ admin admin] Using auth plugin: password
+2016-05-31 15:50:36.939 15704 WARNING tripleoclient.utils.assign_and_verify_profiles [ admin admin] 8 nodes with profile None won't be used for deployment now
+2016-05-31 15:50:36.986 15704 INFO tripleoclient.utils.assign_and_verify_profiles [ admin admin] Node 3da8bf69-97a9-4548-8d94-4126420717a5 was assigned profile None
+2016-05-31 15:50:37.039 15704 INFO tripleoclient.utils.assign_and_verify_profiles [ admin admin] Node 77e95c84-22fb-4776-9349-c4ad7185e764 was assigned profile None
+2016-05-31 15:50:37.097 15704 INFO tripleoclient.utils.assign_and_verify_profiles [ admin admin] Node 4925b448-702c-4b05-b43b-b8b7a5bdcf94 was assigned profile None
+2016-05-31 15:50:37.137 15704 INFO tripleoclient.utils.assign_and_verify_profiles [ admin admin] Node 1db79134-2038-406f-92fc-7b0baafa4f29 was assigned profile None
+2016-05-31 15:50:37.177 15704 INFO tripleoclient.utils.assign_and_verify_profiles [ admin admin] Node fe990518-8fa3-4308-ae7b-ce24b59f8774 was assigned profile None
+2016-05-31 15:50:37.223 15704 INFO tripleoclient.utils.assign_and_verify_profiles [ admin admin] Node d6a3137f-f63d-411d-89b5-da05251fb665 was assigned profile None
+2016-05-31 15:50:37.262 15704 INFO tripleoclient.utils.assign_and_verify_profiles [ admin admin] Node 24edde06-775f-4d5b-8941-1eb377c460fb was assigned profile None
+2016-05-31 15:50:37.303 15704 INFO tripleoclient.utils.assign_and_verify_profiles [ admin admin] Node 1e78f315-2bda-4ae0-82a0-0cbd80402583 was assigned profile None
+2016-05-31 15:50:37.342 15704 INFO tripleoclient.utils.assign_and_verify_profiles [ admin admin] Node dc5bdd4d-0fe0-4a1d-abb7-c0adde4e3b8b was assigned profile None
+2016-05-31 15:50:37.382 15704 INFO tripleoclient.utils.assign_and_verify_profiles [ admin admin] Node ae84332c-54be-4f1a-aa82-c7fa35fe66f6 was assigned profile None
+2016-05-31 15:50:37.423 15704 INFO tripleoclient.utils.assign_and_verify_profiles [ admin admin] Node ddbea81c-964a-4780-8d4d-aa207f93d7f9 was assigned profile None
+2016-05-31 15:50:37.462 15704 INFO tripleoclient.utils.assign_and_verify_profiles [ admin admin] Node de942e3c-5519-4080-937b-faccbc95b5aa was assigned profile None
+2016-05-31 15:50:37.501 15704 INFO tripleoclient.utils.assign_and_verify_profiles [ admin admin] Node 05c345f9-143e-45f2-9238-6661a6e207aa was assigned profile None
+2016-05-31 15:50:37.540 15704 INFO tripleoclient.utils.assign_and_verify_profiles [ admin admin] Node 856d511b-7a4d-4ac4-8d66-414a3b827284 was assigned profile None
+2016-05-31 15:50:37.585 15704 INFO tripleoclient.utils.assign_and_verify_profiles [ admin admin] Node 7e5501b3-9177-4f85-83d6-aaf02e270c5f was assigned profile None
+2016-05-31 15:50:37.630 15704 INFO tripleoclient.utils.assign_and_verify_profiles [ admin admin] Node f552c780-0fe8-49f5-8a00-19279fb483d2 was assigned profile None
+2016-05-31 15:50:37.631 15704 ERROR tripleoclient.v1.overcloud_deploy.DeployOvercloud [ admin admin] Configuration has 1 warnings, fix them before proceeding. 
+2016-05-31 15:50:37.727 15704 INFO tripleoclient.v1.overcloud_deploy.DeployOvercloud [ admin admin] No stack found, will be doing a stack create
+2016-05-31 15:50:38.385 15704 INFO tripleoclient.v1.overcloud_deploy.DeployOvercloud [ admin admin] Performing Heat stack create
+2016-05-31 16:18:59.193 15704 INFO os_cloud_config.keystone [ admin admin] Role admin was already created.
+2016-05-31 16:18:59.607 15704 INFO os_cloud_config.keystone [ admin admin] Admin user already exists, skip creation
+2016-05-31 16:18:59.875 15704 INFO os_cloud_config.keystone [ admin admin] Granting admin role to admin user on admin project.
+2016-05-31 16:18:59.988 15704 INFO os_cloud_config.keystone [ admin admin] Granting admin role to admin user on default domain.
+2016-05-31 16:19:06.480 15704 INFO openstackclient.shell [ admin admin] END return value: 0
